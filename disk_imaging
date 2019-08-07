@@ -1,1 +1,3 @@
+sudo su
+
 sfdisk -l |awk '/sd/ {print}'
