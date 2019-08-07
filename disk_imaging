@@ -18,3 +18,4 @@ mount $mydisk /mnt/mydisk
 cd /mnt/mydisk
 ls
 
+https://blog.sleeplessbeastie.eu/2012/04/29/virtualbox-convert-raw-image-to-vdi-and-otherwise/
