@@ -1,3 +1,14 @@
 sudo su
-
 sfdisk -l |awk '/sd/ {print}'
+
+myimg="img.iso"
+mydisk="sd***"
+touch $myimg
+#for good disk
+dd if=/dev/$mydisk of=$myimg status=progress bs=1024k
+
+#for destroyed disk
+dd if=/dev/$mydisk of=$myimg status=progress conv=noerror
+chmod 777 $mydisk
+exit
+mount $mydisk /mnt/
