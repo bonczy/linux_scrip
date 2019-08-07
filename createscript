@@ -1,0 +1,4 @@
+touch myscript
+chmod +x myscript
+echo 'script body' > myscritpt
+./myscript
