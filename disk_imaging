@@ -1,6 +1,9 @@
 sudo su
 sfdisk -l |awk '/sd/ {print}'
 
+df -h
+pydf
+
 myimg="img.iso"
 mydisk="sd***"
 touch $myimg
@@ -11,4 +14,7 @@ dd if=/dev/$mydisk of=$myimg status=progress bs=1024k
 dd if=/dev/$mydisk of=$myimg status=progress conv=noerror
 chmod 777 $mydisk
 exit
-mount $mydisk /mnt/
+mount $mydisk /mnt/mydisk
+cd /mnt/mydisk
+ls
+
