@@ -1,6 +1,6 @@
 sudo su
 sfdisk -l |awk '/sd/ {print}'
-
+lsblk
 df -h
 pydf
 
