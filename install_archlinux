@@ -1,1 +1,2 @@
 cgdisk /dev/sdxxx
+mkfs.fat /F32 /dev/sdxY
