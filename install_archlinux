@@ -1,3 +1,4 @@
 cgdisk /dev/sdxY
 mkfs.fat -F32 /dev/sdxY
 lsblk
+sudo apt-get install gparted
