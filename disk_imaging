@@ -26,3 +26,7 @@ ls
 pv -tpreb /dev/sdxy | dd of=/dev/sdyx bs=4096 conv=notrunc,noerror
 
 pv -tpreb /dev/sdxy | dd of=/dev/sdyx bs=64M
+
+aptitude install os-prober #instalacja dla systemów opartych na Debianie
+os-prober
+update-grub2
