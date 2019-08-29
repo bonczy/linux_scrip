@@ -20,3 +20,9 @@ ls
 
 #https://blog.sleeplessbeastie.eu/2012/04/29/virtualbox-convert-raw-image-to-vdi-and-otherwise/
 # for windows cmd -> diskmgmt
+
+(pv -n /dev/sdxy | dd of=/dev/sdyx bs=128M conv=notrunc,noerror) 2&gt;&amp;1 | dialog --gauge "Running dd command (cloning), please wait..." 10 70 0
+
+pv -tpreb /dev/sdxy | dd of=/dev/sdyx bs=4096 conv=notrunc,noerror
+
+pv -tpreb /dev/sdxy | dd of=/dev/sdyx bs=64M
