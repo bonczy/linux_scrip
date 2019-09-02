@@ -1,0 +1,2 @@
+aptitude install os-prober #instalacja dla systemów opartych na Debianie
+os-prober
