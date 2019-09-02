@@ -1,2 +1,56 @@
 aptitude install os-prober #instalacja dla systemów opartych na Debianie
 os-prober
+przygotowałem:
+Windows 7 ultmate i Ubuntu 18, sprzęt zgodny z wymaganiami, JEDEN dysk.
+
+instaluję windows na partycji 40GB (windows potrzebne instalacje i trochę miejsca)
+można zywczajnie zainstalować windows a potem mu zmniejszyć rozmiar jego dysku do 40Gb
+(windos start=>cmd=>diskmgmt ubuntu g
+przy instacji windowsa stworzy on partycję rozruchową wielkości 100Mb
+tworzę partycję fat lub ntfs z pozostałej części dysku, ale bez 10Gb
+instaluję ubuntu wybierając opcję instalacja obok windowsa
+tworzę obraz parycji rozruchowej
+sudo dd if=/dev/sda1 of=[ścieżka dostępu]/bootstart bs=50M status=progress
+
+restartuję i wracam do windowsa
+czekam aż sprawdzi dysk
+instaluję wszystkie drivery, updaty, serwispaki, programy, zipy, toolsy do montowania płytrek z obrazów commadery i co kto lubi,
+żeby nie mieć przy restacie żadnych okienek i się nie denerwować.
+restartuję i whodzę do ubuntu
+
+
+FAQ
+
+NIE DZIAŁA WI-FI USB
+
+-wyciągnij i włóż usb tp link
+
+CHCĘ ODTWORZYĆ PIERWOTNY WINDOWS
+
+- Otwieram terminal (po lewej stronie czarny prostokącik)
+- wpisuję (lub zaznaczam kursorem tekst poniżej (tekst lepiej zaznaczać od 
+prawej do lewej) prawym przyciskiem rozwijam menu wyboru, wybiram kopuj, kursor przenszę na terminal i 
+za znakiem zachęty ponownie naciskam prawy przycisk, a zmenu wybiram wklej): 
+
+sudo dd if=[ścieżka dostępu]/winstart of=/dev/sda2 bs=50M status=progress
+
+-czekam, aż dobije do ok 41Gb
+-mogę restartować komputer i wybierać windows "zdrowy" windows
+
+uwaga: wszystkie dane nagrane na partycji winowsa będą skasowane 
+
+
+NIE STARTUJE MI LINUX ALBO WINDOWS
+
+sudo dd if=[ścieżka dostępu]/bootstart of=/dev/sda1 bs=50M status=progress
+
+uwaga: może nie działać jak ktoś zacznie się bawić z formatowaniem dysku
+
+CHCĘ ZACHOWAĆ WSZYSTKO CO ZAINSTALOWAŁEM NA SYSTEMIE WINDOWS
+
+sudo dd of=[ścieżka dostępu]/winbackup if=/dev/sda2 bs=50M status=progress
+
+CHCĘ ODTWORZYĆ UPRZEDNIO PRZEZEMNIE PRZEINSTALOWANY I ZACHOWANY SYSTEM
+
+sudo dd if=[ścieżka dostępu]/winbackup of=/dev/sda2 bs=50M status=progress
+
