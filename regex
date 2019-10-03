@@ -1,0 +1,4 @@
+perl bluefish
+  html 
+    uncomment:  (<!--)(.*)(-->) \2
+    comment:  <!-- -->
