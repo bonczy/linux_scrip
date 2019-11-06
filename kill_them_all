@@ -1,2 +1,5 @@
 ps aux
 i pozniej kill -9 nrprocesu
+
+do zabicia firefoxa
+/usr/lib/firefox/f
