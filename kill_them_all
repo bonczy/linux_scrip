@@ -1,0 +1,2 @@
+ps aux
+i pozniej kill -9 nrprocesu
