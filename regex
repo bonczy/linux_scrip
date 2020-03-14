@@ -9,7 +9,7 @@ wzorzec: PERL
     
   js   :
  //
- comment        (.*)(^)(.*)       \1//\3
+ comment        (.*)(^)(.*)       \1\2//\3
  uncomment:     (.*)(//)(.*)      \1\3
  /**/
  uncomment      (/\*)(.*)(\*/)    \2
