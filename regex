@@ -1,17 +1,17 @@
 program: bluefish
 zakres: zaznacznie
 wzorzec: PERL
-
+                szukaj            zastąp
   html :
   <!---->
-    uncomment:  (<!--)(.*)(-->) \2
-    comment:  <!-- -->
+    uncomment:  (<!--)(.*)(-->)   \2
+    comment:    <!-- -->
     
   js   :
  //
- comment    (.*)(^)(.*)   \1//\3
- uncomment: (.*)(//)(.*)  \1\3
+ comment        (.*)(^)(.*)       \1//\3
+ uncomment:     (.*)(//)(.*)      \1\3
  /**/
- uncomment(/\*)(.*)(\*/)   \2
+ uncomment      (/\*)(.*)(\*/)    \2
             
     
