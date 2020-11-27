@@ -2,4 +2,4 @@ md5sum #suma kontrolna
 ps aux | grep xampp #procesy z xampp'em
 kill -l #z procesem mogę zrobić to
 killall -9 xampp #zabij wszystkie procesy o nazwie xampp
-chmod -R 777 /home/user
+chmod -R 755 /home/user #zmaina uprawnień do katalogu i wszystkiego co jest wewnątrz na wszytko dla właściciela i czytanie oraz uruchamianie dla pozostałych.
