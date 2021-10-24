@@ -1,4 +1,4 @@
-etc/pulse/daemon.conf
+/etc/pulse/daemon.conf
 
 aplay -L
 aplay -l
