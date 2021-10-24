@@ -1,0 +1,8 @@
+etc/pulse/daemon.conf
+
+aplay -L
+aplay -l
+
+sudo killall pulseaudio
+speaker-test -c 6 -t wav -D plug:surround51
+sudo alsa force-reload
